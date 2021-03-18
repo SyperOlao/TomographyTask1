@@ -23,7 +23,7 @@ namespace TomographyTask1
             parallel.StartPoint = new Point(350, 350);
             parallel.M = 5;
             parallel.N = 5;
-            parallel.n = 10;
+            parallel.n = 40;
             parallel.R = 60;
 
             parallel.DrawLines(graphics, 20, 20, 500, 500);

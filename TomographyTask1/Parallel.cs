@@ -21,18 +21,18 @@ namespace TomographyTask1
         
         public void DrawLines(Graphics graphics, float x1, float y1, float x2, float y2)
         {
+
             graphics.DrawEllipse(new Pen(Color.Gray), StartPoint.X, StartPoint.Y, R, R);
             for (int i = 0, k = 0; i < N; k += n, i++)
             {
-                scanline.DrawScanLine(graphics, x1, y1, x2, y2, 20);
-
-                x1 *= (float)Math.Cos(Math.PI / 2 + GetFm(k));
-                y1 *= (float)Math.Sin(Math.PI / 2 + GetFm(k));
-
-                x2 *= (float)Math.Cos(Math.PI / 2 + GetFm(k));
-                y2 *= (float)Math.Sin(Math.PI / 2 + GetFm(k));
+                //  scanline.DrawScanLine(graphics, x1 + k, y1, x2 + k, y2, 20);
+                scanline.DrawScanLine(graphics, -R+n, );
             }
-        }
+        }/lkj vbn'
+
+        (-R+n)*
+       gx nbvc
+      /*  x1* (float) Math.Cos(Math.PI / 2 + GetFm(k))*/
 
         private double GetFm(int m)
         {
