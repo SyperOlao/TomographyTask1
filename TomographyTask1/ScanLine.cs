@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace TomographyTask1.src
+namespace TomographyTask1
 {
     class ScanLine
     {
@@ -10,10 +10,12 @@ namespace TomographyTask1.src
             graphics.DrawLine(new Pen(Color.Black), point1, point2); 
         }
 
-        public void DrawScanLine(Graphics graphics, double x1, double y1, double x2, double y2,int heighs)
+        public void DrawScanLine(Graphics graphics, float x1, float y1, float x2, float y2, int heighs)
         {
-            graphics.DrawRectangle(new Pen(Color.Black), (float)x1, (float)y1, heighs, heighs);
-            graphics.DrawLine(new Pen(Color.Black), (float)x1, (float)y1, (float)x2, (float)y2);
+            graphics.DrawRectangle(new Pen(Color.Black), x1, y1, heighs, heighs);
+            graphics.DrawLine(new Pen(Color.Black), x1, y1, x2, y2);
         }
+        
+     
     }
 }
