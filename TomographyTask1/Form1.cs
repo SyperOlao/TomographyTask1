@@ -20,13 +20,13 @@ namespace TomographyTask1
         private void Draw(Graphics graphics)
         {
             Parallel parallel = new Parallel();
-            parallel.StartPoint = new Point(350, 350);
+            parallel.StartPoint = new Point(150, 150);
             parallel.M = 5;
             parallel.N = 5;
-            parallel.n = 40;
+            parallel.h = 40;
             parallel.R = 60;
 
-            parallel.DrawLines(graphics, 20, 20, 500, 500);
+            parallel.DrawLines(graphics);
         }
 
         private void button1_Click(object sender, System.EventArgs e)

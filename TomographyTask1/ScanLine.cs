@@ -4,7 +4,7 @@ namespace TomographyTask1
 {
     class ScanLine
     {
-        public void DrawScanLine(Graphics graphics, Point point1, Point point2, int heighs)
+        public void DrawScanLine(Graphics graphics, PointF point1, PointF point2, int heighs)
         {
             graphics.DrawRectangle(new Pen(Color.Black), point1.X, point1.Y, heighs, heighs);
             graphics.DrawLine(new Pen(Color.Black), point1, point2); 
