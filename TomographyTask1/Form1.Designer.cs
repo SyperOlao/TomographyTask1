@@ -70,7 +70,7 @@
             this.textBoxN.Name = "textBoxN";
             this.textBoxN.Size = new System.Drawing.Size(111, 20);
             this.textBoxN.TabIndex = 2;
-            this.textBoxN.Text = "10";
+            this.textBoxN.Text = "5";
             // 
             // label1
             // 

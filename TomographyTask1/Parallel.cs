@@ -7,8 +7,6 @@ namespace TomographyTask1
     class Parallel
     {
         private ScanLine scanline = new ScanLine();
-        private List<PointF> dots;
-
         public int N { get; set; } //Количество датчиков 
         public int h { get; set; } //Расстояние между соседними датчиками   
         public int R { get; set; } // Радиус зоны сканирования 
@@ -17,12 +15,9 @@ namespace TomographyTask1
         public Point StartPoint { get; set; } //точка для отрисовки центра круга 
 
 
-        public void GetDots(Graphics graphics)
+        public void DrawLines(Graphics graphics)
         {
-            List<PointF> dots = new List<PointF>();
-            int Width = StartPoint.X;
-            int Height = StartPoint.Y;
-            int n = (int)(N - 1) / 2;
+            int n = (N - 1) / 2;
             for (int m = 0; m < M; m++)
             {
                 double alpha = GetFm(m);
@@ -35,11 +30,11 @@ namespace TomographyTask1
                     double y2 = (k * h + x2 * Math.Sin(alpha)) / Math.Cos(alpha);
                     if (M % 2 == 0)
                     {
-                        scanline.DrawScanLine(graphics, new PointF((float)x1 + 200, (float)y1 + 200), new PointF((float)x2 + 200, (float)y2 + 200), 10);
-                        scanline.DrawScanLine(graphics, new PointF((float)y1 + 200, (float)x1 + 200), new PointF((float)y2 + 200, (float)x2 + 200), 10);
+                        scanline.DrawScanLine(graphics, new PointF((float)x1 + StartPoint.X, (float)y1 + StartPoint.Y), new PointF((float)x2 + StartPoint.X, (float)y2 + StartPoint.Y), 10);
+                        scanline.DrawScanLine(graphics, new PointF((float)y1 + StartPoint.Y, (float)x1 + StartPoint.X), new PointF((float)y2 + StartPoint.Y, (float)x2 + StartPoint.X), 10);
                     }
                     else
-                        scanline.DrawScanLine(graphics, new PointF((float)x1 + 200, (float)y1 + 200), new PointF((float)x2 + 200, (float)y2 + 200), 10);
+                        scanline.DrawScanLine(graphics, new PointF((float)x1 + StartPoint.X, (float)y1 + StartPoint.Y), new PointF((float)x2 + StartPoint.X, (float)y2 + StartPoint.Y), 10);
                 }
             }
         }
