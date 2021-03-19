@@ -11,13 +11,6 @@ namespace TomographyTask1
             InitializeComponent();
         }
 
-        private void pictureBox1_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics graphics = e.Graphics;
-            graphics.Clear(Color.White);
-             
-        }
-
         private void DrawParallel(Graphics graphics)
         {
             Parallel parallel = new Parallel();
@@ -48,7 +41,6 @@ namespace TomographyTask1
         private void button1_Click(object sender, System.EventArgs e)
         {
             Graphics graphics = CreateGraphics();
-            pictureBox1.Refresh();
             graphics.Clear(Color.White);
             DrawParallel(graphics);
 
@@ -57,7 +49,6 @@ namespace TomographyTask1
         private void button2_Click(object sender, System.EventArgs e)
         {
             Graphics graphics = CreateGraphics();
-            pictureBox1.Refresh();
             graphics.Clear(Color.White);
             DrawFan(graphics);
            
