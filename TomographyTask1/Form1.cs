@@ -21,10 +21,10 @@ namespace TomographyTask1
         {
             Parallel parallel = new Parallel();
             parallel.StartPoint = new Point(100, 100);
-            parallel.M = 5;
-            parallel.N = 5;
-            parallel.h = 10;
-            parallel.R = 90;
+            parallel.M = int.Parse(textBoxM.Text);
+            parallel.N = int.Parse(textBoxN.Text);
+            parallel.h = int.Parse(textBoxh.Text);
+            parallel.R = int.Parse(textBoxR.Text);
 
  
             parallel.GetDots(graphics);
