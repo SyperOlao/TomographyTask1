@@ -6,7 +6,8 @@ namespace TomographyTask1
     {
         public void DrawScanLine(Graphics graphics, PointF point1, PointF point2, int heighs)
         {
-            graphics.DrawRectangle(new Pen(Color.Black), point1.X, point1.Y, heighs, heighs);
+            graphics.FillRectangle(new SolidBrush(Color.Blue), point1.X - heighs/2, point1.Y -heighs/2, heighs, heighs);
+            graphics.FillRectangle(new SolidBrush(Color.Red), point2.X- heighs/2, point2.Y- heighs/2, heighs, heighs);
             graphics.DrawLine(new Pen(Color.Black), point1, point2); 
         }
 
