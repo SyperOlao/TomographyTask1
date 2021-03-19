@@ -21,7 +21,7 @@ namespace TomographyTask1
         {
             Parallel parallel = new Parallel();
             parallel.StartPoint = new Point(100, 100);
-            parallel.M = 3;
+            parallel.M = 5;
             parallel.N = 5;
             parallel.h = 10;
             parallel.R = 90;
